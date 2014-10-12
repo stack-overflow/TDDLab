@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressTests.cs" />
+    <Compile Include="DomainExtensionsTests.cs" />
     <Compile Include="InvoiceLineTests.cs" />
     <Compile Include="InvoiceTests.cs" />
     <Compile Include="MoneyTests.cs" />

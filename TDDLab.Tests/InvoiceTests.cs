@@ -57,6 +57,20 @@ namespace TDDLab.Tests
         }
 
         [Test]
+        public void DiscountValidAndSet_Test()
+        {
+            var discount = new Money(10);
+            Invoice invoice = new Invoice(
+                validInvoiceNumber,
+                validRecipient,
+                validAddress,
+                validLines,
+                discount
+            );
+            Assert.That(invoice.Discount, Is.EqualTo(discount));
+        }
+
+        [Test]
         public void InvoiceNumberEmpty_Test()
         {
             Invoice invoice = new Invoice(
@@ -78,6 +92,62 @@ namespace TDDLab.Tests
                 new InvoiceLine[] { }
             );
             Assert.That(invoice.Validate(), Is.EqualTo(new[] { Invoice.ValidationRules.Lines }));
+        }
+
+        [Test]
+        public void RecipientNull_Test()
+        {
+            var discount = new Money(10);
+            Invoice invoice = new Invoice(
+                validInvoiceNumber,
+                null,
+                validAddress,
+                validLines,
+                discount
+            );
+            Assert.That(invoice.Validate(), Is.EqualTo(new [] { Invoice.ValidationRules.Recipient }));
+        }
+
+        [Test]
+        public void RecipientNotValid_Test()
+        {
+            var discount = new Money(10);
+            Invoice invoice = new Invoice(
+                validInvoiceNumber,
+                new Recipient("", validAddress),
+                validAddress,
+                validLines,
+                discount
+            );
+            Assert.That(invoice.Validate(), Is.EqualTo(new[] { Invoice.ValidationRules.Recipient }));
+        }
+
+        [Test]
+        public void AddressNull_Test()
+        {
+            var discount = new Money(10);
+            Invoice invoice = new Invoice(
+                validInvoiceNumber,
+                validRecipient,
+                null,
+                validLines,
+                discount
+            );
+            Assert.That(invoice.Validate(), Is.EqualTo(new[] { Invoice.ValidationRules.BillingAddress }));
+        }
+
+        [Test]
+        public void AddressNotValid_Test()
+        {
+            var discount = new Money(10);
+            Invoice invoice = new Invoice(
+                validInvoiceNumber,
+                validRecipient,
+                new Address("", "Seattle", "California", "80126"),
+                validLines,
+                discount
+            );
+            Assert.That(invoice.Validate(), Is.EqualTo(new[] { Invoice.ValidationRules.BillingAddress }));
         }
 
         [Test]

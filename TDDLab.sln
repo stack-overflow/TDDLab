@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab.Core", "TDDLab.Core\TDDLab.Core.csproj", "{33389974-EA12-4C73-92C6-CBFC9CD000BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUtils", "BasicUtils\BasicUtils.csproj", "{04359389-8905-4B7C-A525-50C39556883C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab.Tests", "TDDLab.Tests\TDDLab.Tests.csproj", "{BCD78021-5FDF-4EC0-8353-F6D23F1BC150}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33389974-EA12-4C73-92C6-CBFC9CD000BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33389974-EA12-4C73-92C6-CBFC9CD000BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33389974-EA12-4C73-92C6-CBFC9CD000BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33389974-EA12-4C73-92C6-CBFC9CD000BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04359389-8905-4B7C-A525-50C39556883C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04359389-8905-4B7C-A525-50C39556883C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04359389-8905-4B7C-A525-50C39556883C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04359389-8905-4B7C-A525-50C39556883C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD78021-5FDF-4EC0-8353-F6D23F1BC150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD78021-5FDF-4EC0-8353-F6D23F1BC150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD78021-5FDF-4EC0-8353-F6D23F1BC150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD78021-5FDF-4EC0-8353-F6D23F1BC150}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
